@@ -2,13 +2,22 @@
 long num = 600851475143;
 long dev = 0;
 
-for(long i = 600851475142; i > 0; i--)
+for(long i = num; i > 0; i--)
 {
-    if(num%i == 0)
+    if(isSimple(i) && num%i == 0)
     {
         dev = i;
         break;
     }
      
 }
-Console.WriteLine("Cамый большой делитель числа 600851475143: " + dev);
+Console.WriteLine($"Cамый большой делитель числа {num}: " + dev);
+
+bool isSimple(long value)
+{
+    for (int i = 2; i < value; i++)
+    {
+        if(value%i == 0) return(false);
+    }
+    return(true);
+}

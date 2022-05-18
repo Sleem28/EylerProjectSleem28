@@ -1,5 +1,12 @@
 ﻿//Найдите самый большой палиндром, полученный умножением двух трехзначных чисел.
+try
+{
 Console.Clear();
+}
+catch
+{
+    Console.WriteLine();
+}
 
 int maxPolindrom = 0;
 int min3DigNum   = 100;
